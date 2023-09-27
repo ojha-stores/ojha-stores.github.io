@@ -3,31 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ojha Online Store</title>
+    <title>Online Store - Sticky Header with Mobile Navbar</title>
     <!-- Link to the external CSS file -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <div class="logo">Ojha Online Store</div>
-        <nav>
-            <ul>
+        <div class="logo">Your Online Store</div>
+        <!-- Responsive navigation menu (navbar) for mobile -->
+        <nav class="mobile-navbar">
+            <div class="menu-icon">☰</div>
+            <ul class="menu">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Shop</a></li>
                 <li><a href="#">Categories</a></li>
                 <li><a href="#">Cart</a></li>
             </ul>
         </nav>
+        <!-- End of mobile navbar -->
     </header>
 
     <div class="content">
         <!-- Your online store content goes here -->
-        <h1>Welcome to Ojha Online Store</h1>
+        <h1>Welcome to Your Online Store</h1>
         <p>Explore our wide range of products and shop with confidence.</p>
-        <p>Products are not available right now, site is work in progress.</p>
     </div>
 
     <script>
+        // JavaScript for toggling the mobile menu
+        const menuIcon = document.querySelector('.menu-icon');
+        const menu = document.querySelector('.menu');
+
+        menuIcon.addEventListener('click', function() {
+            menu.classList.toggle('show-menu');
+        });
+        
         // JavaScript for the sticky header (optional)
         window.addEventListener('scroll', function() {
             const header = document.querySelector('header');
