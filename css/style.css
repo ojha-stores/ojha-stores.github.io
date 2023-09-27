@@ -13,35 +13,57 @@ header {
     top: 0;
     z-index: 100;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 /* Add your online store's logo and navigation menu */
 .logo {
-    display: inline-block;
     margin-left: 20px;
     font-size: 24px;
     font-weight: bold;
 }
 
-nav {
-    display: inline-block;
-    margin-right: 20px;
-    float: right;
+/* Mobile Navbar Styles */
+.mobile-navbar {
+    display: none; /* Initially hidden on larger screens */
 }
 
-nav ul {
+.menu-icon {
+    display: block;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.menu {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-nav li {
-    display: inline;
-    margin-right: 20px;
-    list-style-type:none;
+.menu li {
+    margin-bottom: 10px;
 }
 
-/* Add your online store's content below */
-.content {
-    padding: 20px;
+/* Show the mobile menu on smaller screens */
+@media (max-width: 768px) {
+    .mobile-navbar {
+        display: block;
+    }
+
+    .menu {
+        background-color: #fff;
+        padding: 10px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+        position: absolute;
+        top: 60px;
+        right: 0;
+        display: none;
+    }
+
+    .menu.show-menu {
+        display: block;
+    }
 }
