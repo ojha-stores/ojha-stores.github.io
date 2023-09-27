@@ -1,10 +1,43 @@
-<html>
-  <head>
-    <link rel="stylesheet" href="css/style.css" />
-    <title>Ojha Store</title>
-  </head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Store - Sticky Header</title>
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Your Online Store</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Categories</a></li>
+                <li><a href="#">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <body>
-    <p>work in progress</p>
-  </body>
+    <div class="content">
+        <!-- Your online store content goes here -->
+        <h1>Welcome to Your Online Store</h1>
+        <p>Explore our wide range of products and shop with confidence.</p>
+    </div>
+
+    <script>
+        // JavaScript for the sticky header (optional)
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            const scrollY = window.scrollY;
+
+            if (scrollY > 0) {
+                header.classList.add('sticky');
+            } else {
+                header.classList.remove('sticky');
+            }
+        });
+    </script>
+</body>
 </html>
